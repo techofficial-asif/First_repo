@@ -13,7 +13,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: execute python file
+            - name: Checkout repository
               uses: actions/checkout@v2
-            - name: Run Super-Linter
-              uses: github/super-linter@v4
+
+            - name: Execute python file
+              run: python your_script.py
