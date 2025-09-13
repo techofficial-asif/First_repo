@@ -1,0 +1,19 @@
+name: First Workflow
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: execute python file
+              uses: actions/checkout@v2
+            - name: Run Super-Linter
+              uses: github/super-linter@v4
